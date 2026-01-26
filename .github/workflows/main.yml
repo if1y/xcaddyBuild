@@ -130,7 +130,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: xcaddy-build-${{ github.run_number }}
-          name: ${{ github.event.repository.updated_at }}
+          name: $(TZ='Asia/Singapore' date +'%Y-%m-%d %H:%M:%S')
           body: |
             **Caddy Version**:
             ```
